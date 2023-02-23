@@ -42,7 +42,7 @@ rule CXX_EXECUTABLE_LINKER__desa_film_flutter
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake -S/home/len/code/DesaFilm-Flutter/desa_film_flutter/linux -B/home/len/code/DesaFilm-Flutter/desa_film_flutter/build/linux/x64/debug
+  command = /usr/bin/cmake -S/home/len/code/desa_film_flutter/linux -B/home/len/code/desa_film_flutter/build/linux/x64/debug
   description = Re-running CMake...
   generator = 1
 

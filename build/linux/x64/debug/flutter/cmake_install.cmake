@@ -1,8 +1,8 @@
-# Install script for directory: /home/len/code/DesaFilm-Flutter/desa_film_flutter/linux/flutter
+# Install script for directory: /home/len/code/desa_film_flutter/linux/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/len/code/DesaFilm-Flutter/desa_film_flutter/build/linux/x64/debug/bundle")
+  set(CMAKE_INSTALL_PREFIX "/home/len/code/desa_film_flutter/build/linux/x64/debug/bundle")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

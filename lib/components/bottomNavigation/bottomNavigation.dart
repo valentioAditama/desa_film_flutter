@@ -1,41 +1,55 @@
 import 'package:flutter/material.dart';
+import 'package:desa_film_flutter/pages/home/home.dart';
+import 'package:desa_film_flutter/pages/login/login.dart';
+import 'package:desa_film_flutter/pages/register/register.dart';
 
-class BottomNavigation extends StatelessWidget {
-  int _selectedNavbar = 0;
+class bottomNaviation extends StatefulWidget {
+  @override
+  _bottomNaviationState createState() => _bottomNaviationState();
+}
 
-  void _changeSelectedNavBar(int index) {
-    setState(() {
-      _selectedNavbar = index;
-    });
-  }
+class _bottomNaviationState extends State<bottomNaviation> {
+  int _selectedIndex = 0;
+
+  List<Widget> _widgetOptions = <Widget>[
+    login(),
+    home(),
+    register(),
+  ];
 
   @override
   Widget build(BuildContext context) {
+  
     return Scaffold(
+      backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        currentIndex: _selectedIndex,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            label: "explore"
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
+
           BottomNavigationBarItem(
-            icon: Icon(Icons.category),
-            label: "category"
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
+
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'search'
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'account'
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
         ],
-        currentIndex: 0,
-        selectedItemColor: Colors.green,
-        unselectedItemColor: Colors.grey,
-        showUnselectedLabels: true,
+        onTap: (index) {
+          setState(() {
+            _selectedIndex = index;
+          });
+        },
       ),
+      body: _widgetOptions.elementAt(_selectedIndex),
     );
   }
+
 }

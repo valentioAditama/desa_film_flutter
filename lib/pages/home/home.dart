@@ -17,7 +17,7 @@ class home extends StatelessWidget {
           child: const Text('Login screen'),
         ),
       ),
-      bottomNavigationBar: BottomNavigation(),
+      bottomNavigationBar: bottomNaviation(),
     );
   }
 }

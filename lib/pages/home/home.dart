@@ -164,7 +164,7 @@ class home extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Image.asset(
-                            'images/poster3.jpg',
+                            'images/poster1.jpg',
                             height: 240,
                           ),
                           Container(
@@ -185,7 +185,7 @@ class home extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Image.asset(
-                            'images/poster2.jpg',
+                            'images/poster5.jpg',
                             height: 240,
                           ),
                           Container(

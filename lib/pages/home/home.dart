@@ -6,7 +6,8 @@ class home extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(brightness: Brightness.dark),
       home: Scaffold(
-        body: Padding(
+          body: SingleChildScrollView(
+        child: Padding(
           padding: EdgeInsets.all(16.0), // atur ukuran padding sesuai kebutuhan
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -146,7 +147,7 @@ class home extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      )),
     );
   }
 }

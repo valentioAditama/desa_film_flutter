@@ -64,9 +64,11 @@ class _MyAppState extends State<MyApp> {
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.black87,
-          unselectedItemColor: Colors.black45,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white38,
           onTap: _onItemTapped,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.black,
         ),
       ),
       // Routes for each bottom navigation item

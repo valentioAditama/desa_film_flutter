@@ -144,6 +144,66 @@ class home extends StatelessWidget {
                   ],
                 ),
               ),
+              Padding(
+                padding: EdgeInsets.only(top: 25),
+                child: Text(
+                  "Adventure Movie",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            'images/poster3.jpg',
+                            height: 240,
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(top: 10),
+                            child: Text(
+                              "Harry Potter (2001)",
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            'images/poster2.jpg',
+                            height: 240,
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(top: 10),
+                            child: Text(
+                              "Avengers EndGame",
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w300),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

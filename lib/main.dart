@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'pages/home/home.dart';
+import 'pages/login/login.dart';
+import 'pages/category/category.dart';
+import 'pages/search/search.dart';
+import 'pages/account/account.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,16 +14,19 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int _selectedIndex = 0;
-  
+
   static List<Widget> _widgetOptions = <Widget>[
     Builder(builder: (BuildContext context) {
-      return HomeScreen();
+      return home();
     }),
     Builder(builder: (BuildContext context) {
-      return FavoritesScreen();
+      return category();
     }),
     Builder(builder: (BuildContext context) {
-      return SettingsScreen();
+      return search();
+    }),
+    Builder(builder: (BuildContext context) {
+      return account();
     }),
   ];
 
@@ -33,80 +41,41 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Bottom Navigation Demo',
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Bottom Navigation Demo'),
-        ),
         body: Center(
           child: _widgetOptions.elementAt(_selectedIndex),
         ),
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
+              icon: Icon(Icons.explore),
+              label: 'Explore',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.favorite),
-              label: 'Favorites',
+              icon: Icon(Icons.category),
+              label: 'Category',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              label: 'Settings',
+              icon: Icon(Icons.search),
+              label: 'Search',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle),
+              label: 'Account',
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.amber[800],
+          selectedItemColor: Colors.black87,
+          unselectedItemColor: Colors.black45,
           onTap: _onItemTapped,
         ),
       ),
       // Routes for each bottom navigation item
       routes: <String, WidgetBuilder>{
-        '/home': (BuildContext context) => HomeScreen(),
-        '/favorites': (BuildContext context) => FavoritesScreen(),
-        '/settings': (BuildContext context) => SettingsScreen(),
+        '/home': (BuildContext context) => home(),
+        '/category': (BuildContext context) => category(),
+        '/search': (BuildContext context) => search(),
+        '/account': (BuildContext context) => login(),
       },
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-      ),
-      body: Center(
-        child: Text('Home Screen 123'),
-      ),
-    );
-  }
-}
-
-class FavoritesScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Favorites'),
-      ),
-      body: Center(
-        child: Text('Favorites Screen'),
-      ),
-    );
-  }
-}
-
-class SettingsScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Settings'),
-      ),
-      body: Center(
-        child: Text('Settings Screen'),
-      ),
     );
   }
 }

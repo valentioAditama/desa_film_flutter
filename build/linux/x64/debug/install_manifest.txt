@@ -5,6 +5,7 @@
 /home/len/code/desa_film_flutter/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
 /home/len/code/desa_film_flutter/build/linux/x64/debug/bundle/data/flutter_assets/images/poster3.jpg
 /home/len/code/desa_film_flutter/build/linux/x64/debug/bundle/data/flutter_assets/images/poster2.jpg
+/home/len/code/desa_film_flutter/build/linux/x64/debug/bundle/data/flutter_assets/images/poster-anime1.png
 /home/len/code/desa_film_flutter/build/linux/x64/debug/bundle/data/flutter_assets/images/7413.jpg
 /home/len/code/desa_film_flutter/build/linux/x64/debug/bundle/data/flutter_assets/images/poster5.jpg
 /home/len/code/desa_film_flutter/build/linux/x64/debug/bundle/data/flutter_assets/images/poster1.jpg
